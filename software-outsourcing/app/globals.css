@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  /* 按钮样式 */
+  .btn-primary {
+    @apply bg-black text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-gray-800 transition-colors disabled:bg-gray-300 
+           disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-black border-2 border-black px-6 py-3 
+           rounded-lg font-medium hover:bg-gray-50 transition-colors;
+  }
+  
+  .btn-success {
+    @apply bg-green-600 text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-green-700 transition-colors;
+  }
+  
+  .btn-danger {
+    @apply bg-red-600 text-white px-6 py-3 rounded-lg font-medium 
+           hover:bg-red-700 transition-colors;
+  }
+  
+  /* 输入框样式 */
+  .input-base {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg 
+           focus:border-black focus:outline-none transition-colors
+           placeholder:text-gray-400;
+  }
+  
+  /* 卡片样式 */
+  .card {
+    @apply bg-white border-2 border-gray-200 rounded-lg p-6 
+           hover:border-gray-400 transition-colors;
+  }
+  
+  /* 状态标签 */
+  .status-pending {
+    @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm;
+  }
+  
+  .status-approved {
+    @apply bg-green-100 text-green-800 px-2 py-1 rounded text-sm;
+  }
+  
+  .status-rejected {
+    @apply bg-red-100 text-red-800 px-2 py-1 rounded text-sm;
+  }
+}
